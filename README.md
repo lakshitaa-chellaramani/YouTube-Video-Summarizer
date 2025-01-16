@@ -1,82 +1,65 @@
-# YouTube Videos Summarizer using OpenAI API
 
-This project utilizes the power of GPT-3.5 to generate concise and informative summaries for YouTube videos. This repository contain both frontend(HTML/CSS/JS) and backend(Flask).
+# YouTube Summarizer
 
-## Demo
+This is a YouTube video summarizer that fetches video transcripts and generates a concise summary using OpenAI's GPT-3.5 model.
 
-Visit this link for live demo: https://summarizeyoutube.netlify.app/
+## Features
+- Extracts video transcript using YouTube's API.
+- Summarizes the transcript in 10 points using OpenAI's GPT-3.5 model.
 
-### Video Demo
+## Prerequisites
 
-https://github.com/UmerrAli/YouTube-Summarizer/assets/106273026/170f3bb1-6762-4430-b8c9-8e90f3c7b7fe
+To get this project up and running, ensure you have the following installed:
+- Python 3.8 or higher
+- pip (Python package installer)
 
-## Frontend
+## Installation
 
-For the frontend of YouTube Video Summarizer, you'll need Node.js and npm (Node Package Manager) which is included with Node.js. Here is how you can install these prerequisites:
-
-- Download and install Node.js from https://nodejs.org/.
-- Verify the installation by running the following commands in your terminal or command prompt:
-  ```bash
-  node -v
-  npm -v
-  ```
-
-### Run Locally
-
-Parcel is used as the bundler for the project.
-
-1. Clone the project:
+1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/UmerrAli/YouTube-Summarizer
+   git clone https://github.com/yourusername/YouTube-Summarizer.git
+   cd YouTube-Summarizer
    ```
-2. Install dependencies using npm:
+
+2. Create a virtual environment (optional but recommended):
    ```bash
-   npm install
+   python -m venv venv
+   source venv/bin/activate  # For macOS/Linux
+   venv\Scripts\activate  # For Windows
    ```
-3. To start a development server
+
+3. Install the required dependencies:
    ```bash
-   npm start
+   pip install -r requirements.txt
    ```
-   This will start the development server at http://localhost:1234. Open this URL in your browser to view the application.
-   http://localhost:1234/
 
-## Backend
+4. **Replace the `API_KEY`**:
+   - Open the `config.py` file.
+   - Replace `your_openai_api_key_here` with your actual OpenAI API key.
 
-- Make sure Python is installed on your machine. You can download it from https://www.python.org/.
-- Verify the installation by running the following command in your terminal or command prompt:
+   ```python
+   API_KEY = 'your_openai_api_key_here'  # Replace with your OpenAI API key
+   ```
 
-```bash
-python3 --version
+   Without this step, the project will not work.
+
+5. Run the application:
+   ```bash
+   python app.py
+   ```
+
+## Usage
+
+- Access the application through your browser or API client (like Postman) at `http://127.0.0.1:5000/summary?v=VIDEO_ID`.
+- Replace `VIDEO_ID` with the YouTube video ID you want to summarize.
+
+Example:
+```
+http://127.0.0.1:5000/summary?v=giYejigUM9A
 ```
 
-Create a virtual environment
-
-```bash
-python3 -m venv venv
-# On Windows
-venv\Scripts\activate
-# On macOS/Linux
-source venv/bin/activate
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
 
-Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Set up OpenAI API Key
-
-Open the config.py file and add your OpenAI API key. If you don't have an API key, you can obtain one from the OpenAI platform.
-
-```python
-API_KEY = 'YOUR_API_KEY'
-```
-
-After setting up the environment and adding the API key, you can run the Flask application:
-
-```
-flask run
-```
-
-The backend server will be running at http://127.0.0.1:5000/. Make sure the backend is running before testing the frontend.
+---
