@@ -1,5 +1,5 @@
 :root {
-  --primary: #e74c3c;
+  --primary: #6a9efd;
 }
 
 /* Reset default margin and padding */
@@ -14,9 +14,22 @@ body {
   line-height: 1.6;
 }
 
-header {
-  text-align: left;
-  padding-top: 15px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  margin-bottom: 30px;
+}
+
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-dark);
 }
 
 header img {
