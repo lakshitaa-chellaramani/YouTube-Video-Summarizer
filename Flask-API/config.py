@@ -1,1 +1,1 @@
-API_KEY = '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'
+API_KEY = 'your_api_key'
