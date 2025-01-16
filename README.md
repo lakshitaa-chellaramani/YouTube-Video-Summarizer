@@ -17,7 +17,7 @@ To get this project up and running, ensure you have the following installed:
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/yourusername/YouTube-Summarizer.git
+   git clone https://github.com/lakshitaa-chellaramani/YouTube-Video-Summarizer.git
    cd YouTube-Summarizer
    ```
 
